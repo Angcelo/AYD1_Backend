@@ -34,7 +34,7 @@ var idCategoria = 1;
 var descripcion = "hp";
 
 var assert = require('assert')
-describe('API',function(){
+describe('API',function() {
   describe('Ciudadano',function(){
     it('POST /usuario/login',(done)=>{
       request(app.listen())
@@ -170,7 +170,7 @@ describe('API',function(){
     it('GET catprod/productosdescripcion',(done)=>{
       request(app.listen())
       .get(`/catprod/productosdescripcion?descripcion=${descripcion}`)
-      .expect(200)
+      .expect(200)    
       .end(function(err,res){
         console.log(res.status)
         var respuesta = JSON.parse(res.res.text)
@@ -192,8 +192,6 @@ describe('API',function(){
         done(err)
       })
     })
-
   })
-
 })
 
